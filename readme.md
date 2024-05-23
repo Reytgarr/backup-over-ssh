@@ -4,13 +4,13 @@ This script allows you to perform backups over SSH to a remote server. Personall
 
 ## Installation
 
-0. Install required packages:
+Install required packages:
 
     ```bash
     apt install ssh rsync
     ```
 
-1. Generate an SSH key pair and copy public key to remote server
+Generate an SSH key pair and copy public key to remote server
 
     ```bash
     ssh-keygen -t rsa
@@ -35,23 +35,23 @@ Inside config file find PubkeyAuthentication and change to "yes":
     PubkeyAuthentication yes
     ```
 
-1. Clone this repository to your local machine:
+Clone this repository to your local machine:
 
     ```bash
     git clone https://github.com/reytgarr/backup-over-ssh.git
     ```
 
-2. Navigate to the project directory:
+Navigate to the project directory:
 
     ```bash
     cd backup-over-ssh
     ```
-3. Change permissions to allow executing file:
+Change permissions to allow executing file:
 
     ```bash
     chmod +x backup.sh
     ```
-4. Create .env file with following variables:
+Create .env file with following variables:
 
     ```bash
     REMOTE_USER="YOUR_SSH_USER"
@@ -62,7 +62,7 @@ Inside config file find PubkeyAuthentication and change to "yes":
     SSH_PORT=YOUR_SSH_PORT
     ```
 
-5. Run script:
+Run script:
 
     ```bash
     ./backup.sh
@@ -84,4 +84,4 @@ It will create new backup each day at 3 am. Of course you can change it to you n
 
 ## Logs
 
-script create logs about process, 
+The script creates logs in the destination directory about the backup process. If you have any problems with script - you should look there.
