@@ -1,6 +1,6 @@
 # Backup Over SSH
 
-This script allows you to perform backups over SSH to a remote server. Personally used to backup website from external web hosting.
+This script allows you to perform backups over SSH from a remote server. Personally used to backup website from external web hosting.
 
 ## Installation
 
@@ -9,7 +9,7 @@ Install required packages:
     apt install ssh rsync
     
 
-Generate an SSH key pair and copy public key to remote server
+Generate an SSH key pair and copy public key to remote server:
 
     ssh-keygen -t rsa
     
@@ -51,7 +51,12 @@ Create .env file with following variables:
     BASE_LOCAL_DIR="/PATH/TO/DESTINATION/DIR"
     BASE_TMP_DIR="/PATH/TO/SOURCE/TEMP/DIR"
     SSH_PORT=YOUR_SSH_PORT
-    
+
+
+Optional: define max number of backups in your local directory by changing DELETE_DAYS variable in backup.sh:
+
+    DELETE_DAYS=10
+
 
 Run script:
 
@@ -68,7 +73,6 @@ To schedule this script, you can add following line to your crontab:
     
 
 It will create new backup each day at 3 am. Of course you can change it to you needs.
-
 
 ## Logs
 
