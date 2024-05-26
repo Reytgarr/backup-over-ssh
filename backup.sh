@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-source ./.env
+source ${BASE_LOCAL_DIR}/.env
 DATE=$(date +"%Y-%m-%d")
 LOCAL_FILE="${BASE_LOCAL_DIR}/backup_${DATE}.tar.gz"
 LOG_FILE="${BASE_LOCAL_DIR}/backup-log.log"
